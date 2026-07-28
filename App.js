@@ -4,36 +4,48 @@ export default function App() {
   return (
     <View style={styles.container}>
 
-      <Image
-        source={require("./assets/TT.jpeg")}
-        style={styles.avatar}
-      />
+      <View style={styles.card}>
 
-      <Text style={styles.name}>
-        Tatiana Mayorga
-      </Text>
+        <Image
+          source={require("./assets/TT.jpeg")}
+          style={styles.avatar}
+        />
 
-      <Text style={styles.role}>
-        Estudiante de Ingeniería Informática
-      </Text>
+        <Text style={styles.name}>
+          Tatiana Mayorga
+        </Text>
+
+        <Text style={styles.role}>
+          Estudiante de Ingeniería Informática
+        </Text>
+
+        <Text style={styles.description}>
+          Apasionada por la tecnología, programación y creación de soluciones digitales.
+        </Text>
 
 
-      <Text style={styles.title}>
-        Mis habilidades
-      </Text>
+        <Text style={styles.title}>
+          Mis habilidades
+        </Text>
 
 
-      <Text style={styles.skill}>
-        • Programación
-      </Text>
+        <View style={styles.skillsContainer}>
 
-      <Text style={styles.skill}>
-        • Java
-      </Text>
+          <Text style={styles.skill}>
+            Programación
+          </Text>
 
-      <Text style={styles.skill}>
-        • Diseño de interfaces
-      </Text>
+          <Text style={styles.skill}>
+            Java
+          </Text>
+
+          <Text style={styles.skill}>
+            Diseño de interfaces
+          </Text>
+
+        </View>
+
+      </View>
 
     </View>
   );
@@ -46,14 +58,33 @@ const styles = StyleSheet.create({
     flex:1,
     justifyContent:'center',
     alignItems:'center',
-    backgroundColor:'#f1f5f9'
+    backgroundColor:'#e2e8f0'
+  },
+
+
+  card:{
+    width:'85%',
+    backgroundColor:'#ffffff',
+    borderRadius:25,
+    padding:30,
+    alignItems:'center',
+
+    shadowColor:'#000',
+    shadowOffset:{
+      width:0,
+      height:5
+    },
+    shadowOpacity:0.15,
+    shadowRadius:10,
+
+    elevation:8
   },
 
 
   avatar:{
-    width:120,
-    height:120,
-    borderRadius:60,
+    width:130,
+    height:130,
+    borderRadius:65,
     marginBottom:20
   },
 
@@ -61,27 +92,49 @@ const styles = StyleSheet.create({
   name:{
     fontSize:28,
     fontWeight:'bold',
-    color:'#0f172a'
+    color:'#1e293b',
+    marginBottom:8
   },
 
 
   role:{
     fontSize:16,
-    marginBottom:20,
-    color:'#475569'
+    color:'#64748b',
+    textAlign:'center',
+    marginBottom:15
+  },
+
+
+  description:{
+    fontSize:14,
+    color:'#475569',
+    textAlign:'center',
+    lineHeight:20,
+    marginBottom:20
   },
 
 
   title:{
     fontSize:20,
     fontWeight:'bold',
-    marginBottom:10
+    color:'#1e293b',
+    marginBottom:15
+  },
+
+
+  skillsContainer:{
+    width:'100%',
   },
 
 
   skill:{
-    fontSize:17,
-    margin:5
+    backgroundColor:'#f1f5f9',
+    padding:12,
+    borderRadius:12,
+    marginVertical:5,
+    fontSize:16,
+    color:'#334155',
+    textAlign:'center'
   }
 
 });
